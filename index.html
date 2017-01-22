@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>little keyboard</title>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen,projection,print" />
+		<meta charset="UTF-8" />
+		<meta name="description" content="a little musical keyboard for the web" />
+
+	</head>
+	<body>
+		<div id="config">
+			<form>
+				<label for = "freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="440"/>
+				<label for = "vol">volume</label><input id="volume" name="vol" type="number" value="1"/>
+				<label for = "move_basekey">move basekey</label><input name="move_basekey" id="move_basekey" type="checkbox" value="movable" checked="checked"/>
+				<label for = "waveform">waveform</label>
+				<select id="waveform" name="waveform">
+					<option value="sine">sine</option>
+					<option value="square">square</option>
+					<option value="triangle">triangle</option>
+					<option value="sawtooth">sawtooth</option>
+				</select>
+			</form>
+		</div>
+		<div id = "keypad">
+			<div id = "basekey" class="key" style="top: 256px; left:256px"></div>
+			<div id = "blakey" class="key" style="top: 256px; left:322px"></div>
+		</div>
+
+		<script src="keypad_generator.js"></script>
+	</body>
+</html>

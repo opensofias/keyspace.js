@@ -1,0 +1,55 @@
+title, head {display: block}
+
+title
+{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 2em; text-align:center;
+}
+
+html
+{
+  font-family: "Source Sans Pro";
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  min-height: 100vh;
+}
+
+body
+{min-height: 100vh; }
+
+.key
+{
+  position: absolute;
+  
+  background: radial-gradient(circle closest-side, #808080 0%,  #808080 50%,  transparent 50%,  transparent 100%);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+
+.key:hover
+{
+  background-color: #808080;
+  background: radial-gradient(circle closest-side,  #808080 0%,  #808080 75%,  transparent 75%,  transparent 100%);
+  width: 64px;
+  height: 64px;
+}
+
+#basekey
+{ background: radial-gradient(circle closest-side, #f00 0%,  #f00 50%,  transparent 50%,  transparent 100%); }
+
+#basekey:hover
+{ background: radial-gradient(circle closest-side, #f00 0%,  #f00 75%,  transparent 75%,  transparent 100%); }
+
+.key:hover:active
+{
+  background-color: #808080;
+  background: radial-gradient(circle closest-side,  #fff 0%,  #fff 75%,  transparent 75%,  transparent 100%);
+  width: 64px;
+  height: 64px;
+}
