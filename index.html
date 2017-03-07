@@ -5,14 +5,16 @@
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen,projection,print" />
 		<meta charset="UTF-8" />
 		<meta name="description" content="a little musical keyboard for the web" />
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
 
 	</head>
 	<body>
 		<div id="config">
 			<form>
 				<label for = "freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="440"/>
-				<label for = "vol">volume</label><input id="volume" name="vol" type="number" value="1"/>
-				<label for = "move_basekey">move basekey</label><input name="move_basekey" id="move_basekey" type="checkbox" value="movable" checked="checked"/>
+				<label for = "vol">volume</label><input id="volume" name="vol" type="number" value="0.2"/>
+				<label for = "touch">touch</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
 				<label for = "waveform">waveform</label>
 				<select id="waveform" name="waveform">
 					<option value="sine">sine</option>
@@ -22,11 +24,6 @@
 				</select>
 			</form>
 		</div>
-		<div id = "keypad">
-			<div id = "basekey" class="key" style="top: 256px; left:256px"></div>
-			<div id = "blakey" class="key" style="top: 256px; left:322px"></div>
-		</div>
-
 		<script src="keypad_generator.js"></script>
 	</body>
 </html>

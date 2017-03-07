@@ -18,8 +18,6 @@ html
   min-height: 100vh;
 }
 
-body
-{min-height: 100vh; }
 
 .key
 {
@@ -31,25 +29,13 @@ body
   border-radius: 50%;
 }
 
-
-.key:hover
-{
-  background-color: #808080;
-  background: radial-gradient(circle closest-side,  #808080 0%,  #808080 75%,  transparent 75%,  transparent 100%);
-  width: 64px;
-  height: 64px;
-}
-
-#basekey
+.basekey
 { background: radial-gradient(circle closest-side, #f00 0%,  #f00 50%,  transparent 50%,  transparent 100%); }
 
-#basekey:hover
-{ background: radial-gradient(circle closest-side, #f00 0%,  #f00 75%,  transparent 75%,  transparent 100%); }
-
-.key:hover:active
+.key.pressed
 {
   background-color: #808080;
-  background: radial-gradient(circle closest-side,  #fff 0%,  #fff 75%,  transparent 75%,  transparent 100%);
+  background: radial-gradient(circle closest-side,  #fff 0%,  #fff 50%,  transparent 50%,  transparent 100%);
   width: 64px;
   height: 64px;
 }
