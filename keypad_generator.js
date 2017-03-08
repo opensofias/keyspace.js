@@ -37,7 +37,7 @@ var settings =
 
 settings.init();
 
-touch: false
+var touch = false
 
 class Key
 {
