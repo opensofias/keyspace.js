@@ -6,24 +6,25 @@
 		<meta charset="UTF-8" />
 		<meta name="description" content="a little musical keyboard for the web" />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-
-
 	</head>
 	<body>
-		<div id="config">
-			<form>
-				<label for = "freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="440"/>
-				<label for = "vol">volume</label><input id="volume" name="vol" type="number" value="0.2"/>
-				<label for = "touch">touch</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
-				<label for = "waveform">waveform</label>
-				<select id="waveform" name="waveform">
-					<option value="sine">sine</option>
-					<option value="square">square</option>
-					<option value="triangle">triangle</option>
-					<option value="sawtooth">sawtooth</option>
-				</select>
-			</form>
-		</div>
+		<form id="config">
+			<label for="freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="220"/>
+			<label for="vol">volume</label><input id="volume" name="vol" type="number" value="0.2"/>
+			<label for="touch">touch</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
+			<label for="waveform">waveform</label>
+			<select id="waveform" name="waveform">
+				<option value="sine">sine</option>
+				<option value="square">square</option>
+				<option value="triangle">triangle</option>
+				<option value="sawtooth">sawtooth</option>
+			</select>
+		</form>
+		<form id="launcher">
+			<section>
+
+			</section>
+		</form>
 		<script src="keypad_generator.js"></script>
 	</body>
 </html>

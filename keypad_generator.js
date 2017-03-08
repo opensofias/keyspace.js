@@ -31,11 +31,13 @@ var settings =
 		this.controls.volume.addEventListener("change", refresh);
 
 		refresh();
-	}
+	},
+	
 }
 
 settings.init();
 
+touch: true
 
 class Key
 {
@@ -53,12 +55,19 @@ class Key
 
 
 
-		this.el.addEventListener("touchstart", press, false)
-		this.el.addEventListener("mousedown", press, false)
-		this.el.addEventListener("touchend", release, false)
-		this.el.addEventListener("touchcancel", release, false)
-		this.el.addEventListener("mouseup", release, false)
-		this.el.addEventListener("mouseout", release, false)
+
+		if (touch)
+		{
+			this.el.addEventListener("touchstart", press, false)
+			this.el.addEventListener("touchend", release, false)
+			this.el.addEventListener("touchcancel", release, false)
+		}
+		else
+		{
+			this.el.addEventListener("mousedown", press, false)
+			this.el.addEventListener("mouseup", release, false)
+			this.el.addEventListener("mouseout", release, false)
+		}
 		this.el.onselectstart = () => false
 		this.el.oncontextmenu = () => false
 	}
@@ -81,6 +90,14 @@ class Key
 	}
 }
 
+/*
+class Launcher
+{
+	constructor ()
+
+	
+}
+*/
 class KeyPad
 {
 	constructor (interval, fraction, keys)
@@ -92,11 +109,35 @@ class KeyPad
 			const factor = Math.pow (interval, count / fraction)
 			const key = new Key (factor)
 			key.el.style.left = (count * 64) + "px"
+			key.el.style.backgroundColor = hz2hls(factor * settings.base_freq)
 			this.el.appendChild (key.el)
 		}
 		while (count ++ < keys)
+	}
+}
+
+class KeyPad2
+{
+	constructor (config)
+	{
 
 	}
 }
 
-document.body.appendChild (new KeyPad (2,16,16).el)
+
+var mod = (x, y = 1) => ((x % y) + y) % y
+
+var hz2hls = freq =>
+{
+	let lightness = Math.log(freq) / Math.log(440 * 64)
+	let hue = mod (Math.log (freq / 27.5) / Math.LN2)
+	return "hsl(" +
+		Math.round(hue * 360) +
+		",100%," +
+		Math.round(lightness * 100) +
+		"%)"
+}
+
+document.body.appendChild (new KeyPad (2,12,12).el)
+
+

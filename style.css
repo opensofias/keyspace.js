@@ -22,20 +22,19 @@ html
 .key
 {
   position: absolute;
-  
-  background: radial-gradient(circle closest-side, #808080 0%,  #808080 50%,  transparent 50%,  transparent 100%);
+  /*background-color: #808080;
+  background: radial-gradient(circle closest-side, #808080 0%,  #808080 50%,  transparent 50%,  transparent 100%);*/
   width: 64px;
   height: 64px;
   border-radius: 50%;
 }
 
-.basekey
-{ background: radial-gradient(circle closest-side, #f00 0%,  #f00 50%,  transparent 50%,  transparent 100%); }
-
 .key.pressed
 {
-  background-color: #808080;
-  background: radial-gradient(circle closest-side,  #fff 0%,  #fff 50%,  transparent 50%,  transparent 100%);
-  width: 64px;
-  height: 64px;
+  border: #fff 4px solid;
+  /*background: radial-gradient(circle closest-side,  #fff 0%,  #fff 50%,  transparent 50%,  transparent 100%);*/
+  margin: -2px;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
 }
