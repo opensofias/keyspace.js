@@ -11,7 +11,6 @@
 		<form id="config">
 			<label for="freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="220"/>
 			<label for="vol">volume</label><input id="volume" name="vol" type="number" value="0.2"/>
-			<label for="touch">touch</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
 			<label for="waveform">waveform</label>
 			<select id="waveform" name="waveform">
 				<option value="sine">sine</option>
@@ -21,9 +20,8 @@
 			</select>
 		</form>
 		<form id="launcher">
-			<section>
-
-			</section>
+			<label for="touch">touch mode</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
+			<label for=interval>frequency multiplier (2 of octave)</label>
 		</form>
 		<script src="keypad_generator.js"></script>
 	</body>

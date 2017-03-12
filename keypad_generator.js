@@ -109,7 +109,7 @@ class KeyPad
 			const factor = Math.pow (interval, count / fraction)
 			const key = new Key (factor)
 			key.el.style.left = (count * 64) + "px"
-			key.el.style.backgroundColor = hz2hls(factor * settings.base_freq)
+			key.el.style.backgroundColor = hz2hsl(factor * settings.base_freq)
 			this.el.appendChild (key.el)
 		}
 		while (count ++ < keys)
@@ -127,7 +127,7 @@ class KeyPad2
 
 var mod = (x, y = 1) => ((x % y) + y) % y
 
-var hz2hls = freq =>
+var hz2hsl = freq =>
 {
 	let lightness = Math.log(freq) / Math.log(440 * 64)
 	let hue = mod (Math.log (freq / 27.5) / Math.LN2)
@@ -138,6 +138,6 @@ var hz2hls = freq =>
 		"%)"
 }
 
-document.body.appendChild (new KeyPad (2,12,12).el)
+document.body.appendChild (new KeyPad (2,16,16).el)
 
 
