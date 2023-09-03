@@ -103,15 +103,6 @@ class KeyPad
 	}
 }
 
-class KeyPad2
-{
-	constructor (config)
-	{
-
-	}
-}
-
-
 var mod = (x, y = 1) => ((x % y) + y) % y
 
 var hz2hsl = freq =>
