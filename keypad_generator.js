@@ -77,14 +77,6 @@ class Key
 	}
 }
 
-/*
-class Launcher
-{
-	constructor ()
-
-	
-}
-*/
 class KeyPad
 {
 	constructor (interval, fraction, keys)
