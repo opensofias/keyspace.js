@@ -2,26 +2,26 @@
 <html>
 	<head>
 		<title>little keyboard</title>
-		<link rel="stylesheet" type="text/css" href="style.css" media="screen,projection,print" />
-		<meta charset="UTF-8" />
-		<meta name="description" content="a little musical keyboard for the web" />
-		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-		<script src="keypad_generator.js" type=module></script>
+		<link rel=stylesheet type=text/css href=style.css media=screen,projection,print />
+		<meta charset=UTF-8 />
+		<meta name=description content='a little musical keyboard for the web' />
+		<meta name=viewport content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+		<script src=keypad_generator.js type=module></script>
 	</head>
 	<body>
-		<form id="config">
-			<label for="freq">base frequency (Hz)</label><input name="freq" id="base_freq" type="number" value="220"/>
-			<label for="vol">volume</label><input id="volume" name="vol" type="number" value="0.2"/>
-			<label for="waveform">waveform</label>
-			<select id="waveform" name="waveform">
-				<option value="sine">sine</option>
-				<option value="square">square</option>
-				<option value="triangle">triangle</option>
-				<option value="sawtooth">sawtooth</option>
+		<form id=config>
+			<label for=freq>base frequency (Hz)</label><input name=freq id=base_freq type=number value=220/>
+			<label for=vol>volume</label><input id=volume name=vol type=number value=0.2/>
+			<label for=waveform>waveform</label>
+			<select id=waveform name=waveform>
+				<option value=sine>sine</option>
+				<option value=square>square</option>
+				<option value=triangle>triangle</option>
+				<option value=sawtooth>sawtooth</option>
 			</select>
 		</form>
-		<form id="launcher">
-			<label for="touch">touch mode</label><input name="touch" id="touch" type="checkbox" value="movable" checked="checked"/>
+		<form id=launcher>
+			<label for=touch>touch mode</label><input name=touch id=touch type=checkbox value=movable checked=checked/>
 			<label for=interval>frequency multiplier (2 of octave)</label>
 		</form>
 	</body>
