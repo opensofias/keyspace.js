@@ -85,6 +85,7 @@ class KeyPad
 	{
 
 		this.el = document.createElement ("div")
+		this.el.classList.add ('keypad')
 
 		hyperIter ([keys], ([count]) => {
 			console.log (count)
