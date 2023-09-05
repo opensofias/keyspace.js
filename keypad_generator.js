@@ -1,5 +1,7 @@
 "use strict";
 
+import { hyperIter } from "./tools.js";
+
 var audio = new AudioContext ()
 var globalGain = audio.createGain ()
 globalGain.connect (audio.destination)
@@ -79,19 +81,19 @@ class Key
 
 class KeyPad
 {
-	constructor (interval, fraction, keys)
+	constructor (interval, fraction, keys, angle, distance)
 	{
+
 		this.el = document.createElement ("div")
-		let count = 0
-		do
-		{
+
+		hyperIter ([keys], ([count]) => {
+			console.log (count)
 			const factor = Math.pow (interval, count / fraction)
 			const key = new Key (factor)
 			key.el.style.left = (count * 64) + "px"
 			key.el.style.backgroundColor = hz2hsl(factor * settings.base_freq)
 			this.el.appendChild (key.el)
-		}
-		while (count ++ < keys)
+		})
 	}
 }
 
