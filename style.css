@@ -8,7 +8,7 @@ title
   font-size: 2em; text-align:center;
 }
 
-html
+:root
 {
   font-family: "Source Sans Pro";
   background-color: #000;
